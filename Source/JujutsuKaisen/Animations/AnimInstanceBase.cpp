@@ -9,7 +9,8 @@ void UAnimInstanceBase::NativeInitializeAnimation()
 {
 	Super::NativeInitializeAnimation();
 	Character = Cast<ACharacter>(GetOwningActor());
-	MovementComponent = Character->GetCharacterMovement();
+	if(Character)
+		MovementComponent = Character->GetCharacterMovement();
 }
 
 void UAnimInstanceBase::NativeUpdateAnimation(float DeltaSeconds)

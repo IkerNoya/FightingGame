@@ -19,10 +19,13 @@ protected:
 	ACharacter* Character = nullptr;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "References")
 	UCharacterMovementComponent* MovementComponent = nullptr;
-private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "References")
 	FVector Velocity = FVector::Zero();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "References")
 	float GroundSpeed = 0.f;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "References")
 	bool bShouldMove = false;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "References")
 	bool bIsFalling = false;
 
 protected:
